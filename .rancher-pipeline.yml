@@ -8,5 +8,10 @@ stages:
         ls -lrt
         pwd
         echo "hello world"
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: library/example:latest
+      registry: 127.0.0.1:34682
 timeout: 60
 notification: {}
