@@ -3,10 +3,10 @@ stages:
   steps:
   - runScriptConfig:
       image: v4ehxdz8.mirror.aliyuncs.com/library/busybox:latest
-      shellScript: whoami
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: library/django-demo:latest
+      shellScript: |-
+        whoami
+        ls -lrt
+        pwd
+        echo "hello world"
 timeout: 60
 notification: {}
